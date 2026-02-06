@@ -1,0 +1,19 @@
+<h1>Hosted Events List:</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Date</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= @events.each do |event| %>
+      <tr>
+        <td><%=event.eventname%></td>
+        <td><%=event.date%></td>
+        <td><%=event.location%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
