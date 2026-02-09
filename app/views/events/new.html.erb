@@ -7,9 +7,10 @@
   <%= form.text_field :location %> <br>
 
   <%= form.label :date %> <br>
-  <%= form.text_area :date %> <br>
+  <%= form.date_select :date %> <br>
   
   <%= form.label :time %> <br>
-  <%= form.text_area :time %> <br>
+  <%= form.time_select :time %> <br>
 
+  <%= form.submit "Create Event"%>
 <% end %>
