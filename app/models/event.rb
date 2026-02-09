@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   has_many :event_attendances,
            foreign_key: :attended_event_id
 
-  has_and_belongs_to_many :attendees,
-                          class_name: "User",
-                          foreign_key: :attendee_id
+  has_many :attendees,
+           through: :event_attendance,
+           source: :attendee
 end

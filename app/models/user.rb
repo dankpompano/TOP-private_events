@@ -6,8 +6,9 @@ class User < ApplicationRecord
   has_many :event_attendances,
            foreign_key: :attendee_id
 
-  has_and_belongs_to_many :attended_events,
-                           class_name: "User"
+  has_many :attended_events,
+            through: :event_attendance,
+            source: :attended_event
 
 
   # Include default devise modules. Others available are:
